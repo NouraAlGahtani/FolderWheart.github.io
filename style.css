@@ -149,3 +149,22 @@ body {
     transform: translatey(-15vmin);
   }
 }
+.containerr { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+@keyframes fallingHeart { 0% { transform: translateY(-100%) rotate(0deg); opacity: 0; } 100% { transform: translateY(100%) rotate(360deg); opacity: 1; } }
+
+.heart { position: absolute; width: 100px; height: 100px; background-color: #f37abc; border-radius: 50% 50% 0 50% / 60% 60% 40% 60%; transform: rotate(-45deg); animation: fallingHeart 5s linear infinite; }
+
+.heart::before { content: ""; position: absolute; top: 0; left: 0; width: 100px; height: 100px; background-color: #ff4c6d; border-radius: 50% 50% 50% 0 / 60% 60% 40% 40%; transform: rotate(45deg); }
+
+.heart::after { content: ""; position: absolute; top: 25px; left: -25px; width: 50px; height: 50px; background-color: #ff4c6d; border-radius: 50% 50% 0 0 / 60% 60% 0 0; transform: rotate(-45deg); }
+
+.heart:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+
+.heart:nth-child(2) { left: 30%; top: 40%; animation-delay: 1s; }
+
+.heart:nth-child(3) { left: 50%; top: 60%; animation-delay: 2s; }
+
+.heart:nth-child(4) { left: 70%; top: 40%; animation-delay: 3s; }
+
+.heart:nth-child(5) { left: 90%; top: 20%; animation-delay: 4s; }
